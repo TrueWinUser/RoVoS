@@ -26,10 +26,10 @@ def price_get(ticker):
 
 def create_report():
     #подгрузка файлов
-    with open('D:\\code\\stock_report\\stocks.json') as f:
+    with open('stocks.json') as f:
         info = json.load(f)
 
-    tickers = open("D:\\code\\stock_report\\tickers.txt", "rt")
+    tickers = open("tickers.txt", "rt")
     tickers_list = (tickers.read().split())
 
     curr_date = str(datetime.datetime.now().date())+"_"+datetime.datetime.now().strftime("%H.%M.%S")
@@ -50,10 +50,10 @@ def create_report():
     result.close()
 
 def add_stock():
-    with open('D:\\code\\stock_report\\stocks.json') as f:
+    with open('stocks.json') as f:
         info = json.load(f)
     
-    tickers = open("D:\\code\\stock_report\\tickers.txt", "a")
+    tickers = open("tickers.txt", "a")
     new_ticker = entr1.get()
     new_price = entr2.get()
     new_amunt = entr3.get()
@@ -66,10 +66,10 @@ def add_stock():
         json.dump(info, f)
 
 def remove_stock():
-    with open('D:\\code\\stock_report\\stocks.json') as f:
+    with open('stocks.json') as f:
         info = json.load(f)
     
-    tickers = open("D:\\code\\stock_report\\tickers.txt", "r")
+    tickers = open("tickers.txt", "r")
     t = tickers.read().split()
     tickers.close()
 
