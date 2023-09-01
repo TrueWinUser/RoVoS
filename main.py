@@ -89,32 +89,32 @@ def remove_stock():
 
 #создание интерфейса
 win = tk.Tk()
-win.title("Программа по созданию отчета о стоимости ценных бумаг")
+win.title("RoVoS")
 win.geometry("500x200")
 
-create_report_btn = tk.Button(win, text="Создать отчет", command=create_report, width=20)
+create_report_btn = tk.Button(win, text="Create report", command=create_report, width=20)
 create_report_btn.grid(column=1, row=0)
 
-add_stock_btn = tk.Button(win, text="Добавить акцию", command=add_stock, width=20)
+add_stock_btn = tk.Button(win, text="Add ticker", command=add_stock, width=20)
 add_stock_btn.grid(column=2, row=0)
 
-lbl1 = tk.Label(win, text="Название акции(тикер):", width=20)
+lbl1 = tk.Label(win, text="Name of the ticker:", width=20)
 lbl1.grid(column=2, row=1)
 entr1 = tk.Entry(win, width=20)
 entr1.grid(column=2, row=2) 
-lbl2 = tk.Label(win, text="Цена покупки:", width=20)
+lbl2 = tk.Label(win, text="Purchase price:", width=20)
 lbl2.grid(column=2, row=3)
 entr2 = tk.Entry(win, width=20)
 entr2.grid(column=2, row=4) 
-lbl3 = tk.Label(win, text="Количество акций:", width=20)
+lbl3 = tk.Label(win, text="Amount of shares:", width=20)
 lbl3.grid(column=2, row=5)
 entr3 = tk.Entry(win, width=20)
 entr3.grid(column=2, row=6) 
 
-remove_stock_btn = tk.Button(win, text="Удалить акцию", command=remove_stock, width=20)
+remove_stock_btn = tk.Button(win, text="Remove ticker", command=remove_stock, width=20)
 remove_stock_btn.grid(column=3, row=0)
 
-lbl4 = tk.Label(win, text="Название акции(тикер):", width=20)
+lbl4 = tk.Label(win, text="Name of the ticker:", width=20)
 lbl4.grid(column=3, row=1)
 entr4 = tk.Entry(win, width=20)
 entr4.grid(column=3, row=2)
