@@ -35,7 +35,7 @@ def create_report():
     curr_date = str(datetime.datetime.now().date())+"_"+datetime.datetime.now().strftime("%H.%M.%S")
     print(curr_date)
 
-    result = open(f"C:\\Users\\andrey\\OneDrive\\Рабочий стол\\reports\\{curr_date}.txt", "w")
+    result = open(f"{curr_date}.txt", "w")
 
     #обработка и запись информации об акциях
     general_margin = 0
